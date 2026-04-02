@@ -1,0 +1,9 @@
+{
+  "cvpr": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+  "iclr": "International Conference on Learning Representations",
+  "eccv": "European Conference on Computer Vision",
+  "neurips": "Annual Conference on Neural Information Processing Systems",
+  "iccv": "Proceedings of the IEEE/CVF International Conference on Computer Vision",
+  "tmlr": "Transactions on Machine Learning Research",
+  "arxiv_preprint": "arXiv preprint"
+}
