@@ -81,6 +81,10 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; 
   display: block;
 }
 
+.profile-photo-frame--inline {
+  display: none;
+}
+
 .profile-info {
   min-width: 0;
   display: grid;
@@ -131,7 +135,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; 
 }
 
 .profile-bio--vision {
-  color: color-mix(in srgb, var(--text) 90%, var(--text-secondary));
   max-width: none;
   width: 100%;
 }
@@ -1110,20 +1113,50 @@ section { margin-bottom: 52px; }
 
   .profile {
     gap: 18px;
-    text-align: center;
   }
   .profile-top {
-    grid-template-columns: 1fr;
-    gap: 18px;
+    display: block;
   }
-  .profile-photo-frame {
-    width: 140px;
-    height: 186px;
-    justify-self: center;
-    align-self: auto;
+  .profile-info {
+    display: block;
   }
-  .profile-rule { margin-left: auto; margin-right: auto; }
-  .profile-links { justify-content: center; }
+  .profile-photo-frame--inline {
+    display: block;
+    grid-area: photo;
+    width: 100%;
+    aspect-ratio: 140 / 186;
+    min-height: 0;
+    justify-self: end;
+    align-self: start;
+    margin: 0;
+  }
+  .profile-photo-frame--desktop {
+    display: none;
+  }
+  .profile-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 132px;
+    grid-template-areas:
+      "header photo"
+      "lead photo";
+    column-gap: 20px;
+    align-items: start;
+  }
+  .profile-intro-copy {
+    grid-area: header;
+    min-width: 0;
+  }
+  .profile-intro > .profile-bio--lead {
+    grid-area: lead;
+  }
+  .profile-rule { margin-left: 0; margin-right: auto; }
+  .profile-bio--vision {
+    text-align: justify;
+    text-align-last: left;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+  .profile-links { justify-content: flex-start; }
 
   .section-head {
     align-items: flex-end;
@@ -1213,6 +1246,14 @@ section { margin-bottom: 52px; }
 
 @media (max-width: 480px) {
   .profile-info h1 { font-size: 1.6rem; }
+  .profile-intro {
+    display: block;
+  }
+  .profile-photo-frame--inline {
+    width: 140px;
+    height: 186px;
+    margin: 12px auto 16px;
+  }
   .pub-grid { grid-template-columns: 1fr; }
 }
 
