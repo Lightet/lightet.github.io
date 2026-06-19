@@ -30,7 +30,7 @@
       <div class="paper-stack">
         <article class="paper-card">
           <div class="paper-card-media">
-              <span class="pub-venue">Preprint 2025</span>
+              <span class="pub-venue highlight">ICML 2026</span>
             <img class="paper-card-thumb" src="assets/figs/Being-H0.png" alt="Being-H0">
             <div class="paper-resource-row">
               <a class="paper-resource" href="https://arxiv.org/pdf/2507.15597" target="_blank" rel="noreferrer">PDF</a>
@@ -68,11 +68,30 @@
             </div>
           </div>
         </article>
+        <article class="paper-card">
+          <div class="paper-card-media">
+            <span class="pub-venue">Preprint 2026</span>
+            <img class="paper-card-thumb" src="assets/figs/Being-H0_7.png?v=20260620" alt="Being-H0.7 latent world-action model">
+            <div class="paper-resource-row">
+              <a class="paper-resource" href="https://arxiv.org/pdf/2605.00078" target="_blank" rel="noreferrer">PDF</a>
+              <a class="paper-resource" href="https://research.beingbeyond.com/being-h07" target="_blank" rel="noreferrer">Blog</a>
+              <a class="paper-resource" href="https://github.com/BeingBeyond/Being-H" target="_blank" rel="noreferrer">Code</a>
+              <button class="paper-resource paper-resource--copy" type="button" data-bibtex-file="assets/bibtex/being-h0-7.bib">Bib</button>
+            </div>
+          </div>
+          <div class="paper-card-body">
+            <p class="work-title">Being-H0.7: A Latent World-Action Model from Egocentric Videos</p>
+            <p class="work-authors"><strong class="me">Hao Luo</strong>, Wanpeng Zhang, Yicheng Feng, Sipeng Zheng, Haiweng Xu, Chaoyi Xu, Ziheng Xi, Yuhui Fu, Zongqing Lu&dagger;</p>
+            <div class="work-desc">
+              Being-H0.7 builds an implicit world model through joint alignment in latent space, enabling future-aware planning before action without generating future video frames.
+            </div>
+          </div>
+        </article>
       </div>
     </div>
 
     <div class="works-theme">
-      <p class="works-theme-label">Learning from Videos &mdash; VLA</p>
+      <p class="works-theme-label">Embodied AI</p>
       <div class="paper-stack">
           <article class="paper-card">
             <div class="paper-card-media">
@@ -90,6 +109,44 @@
               <p class="work-authors"><strong class="me">Hao Luo</strong>, Ye Wang, Wanpeng Zhang, Haoqi Yuan, Yicheng Feng, Haiweng Xu, Sipeng Zheng, Zongqing Lu&dagger;</p>
               <div class="work-desc">
                 Developing JEPT, JALA scales VLA pretraining by aligning hidden states with inverse dynamics to learn unified latent actions from both labeled and unannotated human videos.
+              </div>
+            </div>
+          </article>
+          <article class="paper-card">
+            <div class="paper-card-media">
+              <span class="pub-venue highlight">ECCV 2026</span>
+              <img class="paper-card-thumb" src="assets/figs/better.png" alt="BeTTER benchmark interventions">
+              <div class="paper-resource-row">
+                <a class="paper-resource" href="https://arxiv.org/pdf/2604.18000" target="_blank" rel="noreferrer">PDF</a>
+                <a class="paper-resource" href="https://research.beingbeyond.com/better" target="_blank" rel="noreferrer">Blog</a>
+                <a class="paper-resource" href="https://github.com/BeingBeyond/BeTTER" target="_blank" rel="noreferrer">Code</a>
+                <button class="paper-resource paper-resource--copy" type="button" data-bibtex-file="assets/bibtex/better.bib">Bib</button>
+              </div>
+            </div>
+            <div class="paper-card-body">
+              <p class="work-title">Unmasking the Illusion of Embodied Reasoning in Vision-Language-Action Models</p>
+              <p class="work-authors">Haiweng Xu, Sipeng Zheng, <strong class="me">Hao Luo</strong>, Wanpeng Zhang, Ziheng Xi, Zongqing Lu&dagger;</p>
+              <div class="work-desc">
+                BeTTER stress-tests embodied reasoning in VLA models through controlled causal interventions, exposing shortcut behavior and failures hidden by static benchmarks.
+              </div>
+            </div>
+          </article>
+          <article class="paper-card">
+            <div class="paper-card-media">
+              <span class="pub-venue highlight">ECCV 2026</span>
+              <img class="paper-card-thumb" src="assets/figs/DIG-FLOW.png" alt="Transport Discrepancy">
+              <div class="paper-resource-row">
+                <a class="paper-resource" href="https://arxiv.org/pdf/2512.01715" target="_blank" rel="noreferrer">PDF</a>
+                <a class="paper-resource" href="https://research.beingbeyond.com/dig-flow" target="_blank" rel="noreferrer">Blog</a>
+                <a class="paper-resource" href="https://github.com/BeingBeyond/DiG-Flow" target="_blank" rel="noreferrer">Code</a>
+                <button class="paper-resource paper-resource--copy" type="button" data-bibtex-file="assets/bibtex/dig-flow.bib">Bib</button>
+              </div>
+            </div>
+            <div class="paper-card-body">
+              <p class="work-title">Transport Discrepancy as a Reliability Signal for Vision-Language-Action Models</p>
+              <p class="work-authors">Wanpeng Zhang, Ye Wang, <strong class="me">Hao Luo</strong>, Haoqi Yuan, Yicheng Feng, Sipeng Zheng, Qin Jin, Zongqing Lu&dagger;</p>
+              <div class="work-desc">
+                Transport discrepancy between observation and action representations provides a reliability signal for robust flow-matching VLA training and inference.
               </div>
             </div>
           </article>
@@ -150,26 +207,6 @@
             </div>
           </div>
         </article>
-          <article class="paper-card">
-            <div class="paper-card-media">
-              <span class="pub-venue">Preprint 2025</span>
-              <img class="paper-card-thumb" src="assets/figs/DIG-FLOW.png" alt="DiG-Flow">
-              <div class="paper-resource-row">
-                <a class="paper-resource" href="https://arxiv.org/pdf/2512.01715" target="_blank" rel="noreferrer">PDF</a>
-                <a class="paper-resource" href="https://research.beingbeyond.com/dig-flow" target="_blank" rel="noreferrer">Blog</a>
-                <a class="paper-resource" href="https://github.com/BeingBeyond/DiG-Flow" target="_blank" rel="noreferrer">Code</a>
-                <button class="paper-resource paper-resource--copy" type="button" data-bibtex-file="assets/bibtex/dig-flow.bib">Bib</button>
-              </div>
-            </div>
-            <div class="paper-card-body">
-              <p class="work-title">DiG-Flow: Discrepancy-Guided Flow Matching for Robust VLA Models</p>
-              <p class="work-authors">Wanpeng Zhang, Ye Wang, <strong class="me">Hao Luo</strong>, Haoqi Yuan, Yicheng Feng, Sipeng Zheng, Qin Jin, Zongqing Lu&dagger;</p>
-              <div class="work-desc">
-                DiG-Flow is a plug-and-play module for flow-matching based VLAs that rebalances control between the autoregressive foundation model and the flow expert.
-              </div>
-            </div>
-          </article>
-          
       </div>
     </div>
 
@@ -354,7 +391,7 @@
     </div>
   </section>
 
-  <footer class="footer">&copy; 2025 Hao Luo</footer>
+  <footer class="footer">&copy; 2026 Hao Luo</footer>
 
 </div>
 </body>

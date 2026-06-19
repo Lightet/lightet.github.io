@@ -20,22 +20,15 @@
   <header class="profile">
     <div class="profile-top">
       <div class="profile-info">
-        <div class="profile-intro">
-          <div class="profile-intro-copy">
-            <h1>Hao Luo <span class="name-divider">·</span> <span class="name-zh">罗昊</span></h1>
-            <div class="profile-rule" aria-hidden="true"></div>
-          </div>
-          <div class="profile-photo-frame profile-photo-frame--inline">
-            <img class="profile-photo" src="assets/figs/photo.jpg" alt="Hao Luo">
-          </div>
-          <p class="profile-bio profile-bio--lead">
-            I am a fourth-year Ph.D. student at School of Computer Science, 
-            <a href="https://www.pku.edu.cn/">Peking University</a>, advised by
-            <a href="https://z0ngqing.github.io/">Prof. Zongqing Lu</a>, and expect to graduate in <strong>2027</strong>.
-            Before starting my Ph.D., I received my B.E. in Computer Science from Peking University.
-          </p>
-        </div>
-        <p class="profile-bio profile-bio--vision">
+        <h1>Hao Luo <span class="name-divider">·</span> <span class="name-zh">罗昊</span></h1>
+        <div class="profile-rule" aria-hidden="true"></div>
+        <p class="profile-bio profile-bio--lead">
+          I am a fourth-year Ph.D. student at School of Computer Science,
+          <a href="https://www.pku.edu.cn/">Peking University</a>, advised by
+          <a href="https://z0ngqing.github.io/">Prof. Zongqing Lu</a>, and expect to graduate in <strong>2027</strong>.
+          Before starting my Ph.D., I received my B.E. in Computer Science from Peking University.
+        </p>
+        <p class="profile-bio profile-bio--lead">
           My current research focuses on <strong>Embodied AI</strong>, especially <strong>Embodied Foundation Models</strong>.
           Specifically, I am working on <strong> generalizable VLAs scalable with human videos</strong> and 
           <strong>action-oriented latent representations learned with world models</strong>. 
@@ -43,7 +36,7 @@
           Feel free to reach out if you are interested in discussions or collaborations.
         </p>
       </div>
-      <div class="profile-photo-frame profile-photo-frame--desktop">
+      <div class="profile-photo-frame">
         <img class="profile-photo" src="assets/figs/photo.jpg" alt="Hao Luo">
       </div>
     </div>
@@ -89,6 +82,7 @@
       <ul class="hero-summary-list">
         <li class="hero-summary-item"><strong>Being-H0</strong> validates that <strong>thousand-hour human videos</strong> can pretrain dexterous VLAs with <strong>human priors transferable in downstream tasks</strong>.</li>
         <li class="hero-summary-item"><strong>Being-H0.5</strong> further scales this recipe to <strong>35,000+ hours</strong> through unified training on <strong>human, robot, and visual-text data</strong>, enabling <strong>cross-embodiment policies</strong>.</li>
+        <li class="hero-summary-item"><strong>Being-H0.7</strong> develops a <strong>latent world-action model</strong> that plans with future-aware latent representations before acting, without generating future video frames.</li>
       </ul>
     </div>
     <div class="hero-papers">
@@ -98,7 +92,7 @@
           <p class="hero-paper-name">Being-H0: Vision-Language-Action Pretraining from Large-Scale Human Videos</p>
           <div class="hero-paper-line">
             <p class="hero-paper-authors"><strong class="me">Hao Luo</strong>*, et al.</p>
-            <p class="hero-paper-meta">First-Listed Co-First</p>
+            <p class="hero-paper-meta">ICML 2026 · First-Listed Co-First</p>
           </div>
         </div>
         <div class="paper-resource-row">
@@ -126,6 +120,25 @@
           <button class="paper-resource paper-resource--copy" type="button" data-bibtex-file="assets/bibtex/being-h0-5.bib">Bib</button>
         </div>
       </article>
+      <article class="hero-paper">
+        <img class="hero-paper-img" src="assets/figs/Being-H0_7.png?v=20260620" alt="Being-H0.7 latent world-action model">
+        <div class="hero-paper-body">
+          <p class="hero-paper-name">Being-H0.7: A Latent World-Action Model from Egocentric Videos</p>
+          <div class="hero-paper-line">
+            <p class="hero-paper-authors"><strong class="me">Hao Luo</strong>*, et al.</p>
+            <p class="hero-paper-meta">First-Listed Co-First</p>
+          </div>
+        </div>
+        <div class="paper-resource-row">
+          <a class="paper-resource" href="https://arxiv.org/pdf/2605.00078" target="_blank" rel="noreferrer">PDF</a>
+          <a class="paper-resource" href="https://research.beingbeyond.com/being-h07" target="_blank" rel="noreferrer">Blog</a>
+          <a class="paper-resource" href="https://github.com/BeingBeyond/Being-H" target="_blank" rel="noreferrer">Code</a>
+          <button class="paper-resource paper-resource--copy" type="button" data-bibtex-file="assets/bibtex/being-h0-7.bib">Bib</button>
+        </div>
+      </article>
+      <div class="hero-paper-continuation" aria-label="More Being-H work to come">
+        <span>To be continued…</span>
+      </div>
     </div>
   </section>
 
@@ -137,7 +150,7 @@
     </div>
 
     <div class="works-theme">
-      <p class="works-theme-label">Learning from Videos &mdash; VLA</p>
+      <p class="works-theme-label">Embodied AI</p>
       <div class="paper-stack">
           <article class="paper-card">
             <div class="paper-card-media">
@@ -155,6 +168,44 @@
               <p class="work-authors"><strong class="me">Hao Luo</strong>, Ye Wang, Wanpeng Zhang, Haoqi Yuan, Yicheng Feng, Haiweng Xu, Sipeng Zheng, Zongqing Lu</p>
               <div class="work-desc">
                 Developing JEPT, JALA scales VLA pretraining by aligning hidden states with inverse dynamics to learn unified latent actions from both labeled and unannotated human videos.
+              </div>
+            </div>
+          </article>
+          <article class="paper-card">
+            <div class="paper-card-media">
+              <span class="pub-venue highlight">ECCV 2026</span>
+              <img class="paper-card-thumb" src="assets/figs/better.png" alt="BeTTER benchmark interventions">
+              <div class="paper-resource-row">
+                <a class="paper-resource" href="https://arxiv.org/pdf/2604.18000" target="_blank" rel="noreferrer">PDF</a>
+                <a class="paper-resource" href="https://research.beingbeyond.com/better" target="_blank" rel="noreferrer">Blog</a>
+                <a class="paper-resource" href="https://github.com/BeingBeyond/BeTTER" target="_blank" rel="noreferrer">Code</a>
+                <button class="paper-resource paper-resource--copy" type="button" data-bibtex-file="assets/bibtex/better.bib">Bib</button>
+              </div>
+            </div>
+            <div class="paper-card-body">
+              <p class="work-title">Unmasking the Illusion of Embodied Reasoning in Vision-Language-Action Models</p>
+              <p class="work-authors">Haiweng Xu, Sipeng Zheng, <strong class="me">Hao Luo</strong>, Wanpeng Zhang, Ziheng Xi, Zongqing Lu</p>
+              <div class="work-desc">
+                BeTTER stress-tests embodied reasoning in VLA models through controlled causal interventions, exposing shortcut behavior and failures hidden by static benchmarks.
+              </div>
+            </div>
+          </article>
+          <article class="paper-card">
+            <div class="paper-card-media">
+              <span class="pub-venue highlight">ECCV 2026</span>
+              <img class="paper-card-thumb" src="assets/figs/DIG-FLOW.png" alt="Transport Discrepancy">
+              <div class="paper-resource-row">
+                <a class="paper-resource" href="https://arxiv.org/pdf/2512.01715" target="_blank" rel="noreferrer">PDF</a>
+                <a class="paper-resource" href="https://research.beingbeyond.com/dig-flow" target="_blank" rel="noreferrer">Blog</a>
+                <a class="paper-resource" href="https://github.com/BeingBeyond/DiG-Flow" target="_blank" rel="noreferrer">Code</a>
+                <button class="paper-resource paper-resource--copy" type="button" data-bibtex-file="assets/bibtex/dig-flow.bib">Bib</button>
+              </div>
+            </div>
+            <div class="paper-card-body">
+              <p class="work-title">Transport Discrepancy as a Reliability Signal for Vision-Language-Action Models</p>
+              <p class="work-authors">Wanpeng Zhang, Ye Wang, <strong class="me">Hao Luo</strong>, Haoqi Yuan, Yicheng Feng, Sipeng Zheng, Qin Jin, Zongqing Lu</p>
+              <div class="work-desc">
+                Transport discrepancy between observation and action representations provides a reliability signal for robust flow-matching VLA training and inference.
               </div>
             </div>
           </article>
@@ -310,7 +361,16 @@
     <h2 class="section-title">Experience</h2>
     <div class="experience-list">
       <article class="experience-item">
-        <div class="experience-date">Apr 2025 - Present</div>
+        <div class="experience-date">Jun 2026 - Present</div>
+        <div class="experience-body">
+          <div class="experience-head">
+            <h3>ByteDance</h3>
+            <p class="exp-role">Embodied AI Algorithm Intern, Seed - Multimodal Interaction and World Model Team</p>
+          </div>
+        </div>
+      </article>
+      <article class="experience-item">
+        <div class="experience-date">Apr 2025 - Jun 2026</div>
         <div class="experience-body">
           <div class="experience-head">
             <h3>BeingBeyond Technology</h3>
@@ -356,7 +416,7 @@
     </div>
   </section>
 
-  <footer class="footer">&copy; 2025 Hao Luo </footer>
+  <footer class="footer">&copy; 2026 Hao Luo</footer>
 
 </div>
 </body>

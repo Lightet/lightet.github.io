@@ -81,10 +81,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; 
   display: block;
 }
 
-.profile-photo-frame--inline {
-  display: none;
-}
-
 .profile-info {
   min-width: 0;
   display: grid;
@@ -135,6 +131,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; 
 }
 
 .profile-bio--vision {
+  color: color-mix(in srgb, var(--text) 90%, var(--text-secondary));
   max-width: none;
   width: 100%;
 }
@@ -352,7 +349,8 @@ section { margin-bottom: 52px; }
 }
 
 .hero-papers {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
 }
 
@@ -364,7 +362,6 @@ section { margin-bottom: 52px; }
   border-radius: 10px;
   text-decoration: none;
   color: #fff;
-  flex: 1;
   overflow: hidden;
   transition: background .25s, transform .25s;
 }
@@ -379,7 +376,27 @@ section { margin-bottom: 52px; }
   width: 100%;
   height: auto;
   display: block;
+  object-fit: contain;
   background: rgba(255,255,255,.08);
+}
+
+.hero-paper-img--placeholder {
+  aspect-ratio: 1.25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 28% 22%, rgba(255,255,255,.12), transparent 42%),
+    rgba(255,255,255,.06);
+}
+
+.hero-paper-img--placeholder::after {
+  content: attr(data-label);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  color: rgba(255,255,255,.68);
 }
 
 .hero-paper-body {
@@ -420,6 +437,17 @@ section { margin-bottom: 52px; }
   opacity: .74;
   white-space: nowrap;
   text-align: right;
+}
+
+.hero-paper-continuation {
+  display: grid;
+  place-items: center;
+  min-height: 100%;
+  color: rgba(255,255,255,.46);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: .88rem;
+  font-style: italic;
+  letter-spacing: .035em;
 }
 
 /* ===== Selected Works ===== */
@@ -842,6 +870,7 @@ section { margin-bottom: 52px; }
 }
 
 .hero-paper .paper-resource-row {
+  margin-top: auto;
   padding: 0 11px 10px;
 }
 
@@ -1113,50 +1142,20 @@ section { margin-bottom: 52px; }
 
   .profile {
     gap: 18px;
+    text-align: center;
   }
   .profile-top {
-    display: block;
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
-  .profile-info {
-    display: block;
+  .profile-photo-frame {
+    width: 140px;
+    height: 186px;
+    justify-self: center;
+    align-self: auto;
   }
-  .profile-photo-frame--inline {
-    display: block;
-    grid-area: photo;
-    width: 100%;
-    aspect-ratio: 140 / 186;
-    min-height: 0;
-    justify-self: end;
-    align-self: start;
-    margin: 0;
-  }
-  .profile-photo-frame--desktop {
-    display: none;
-  }
-  .profile-intro {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 132px;
-    grid-template-areas:
-      "header photo"
-      "lead photo";
-    column-gap: 20px;
-    align-items: start;
-  }
-  .profile-intro-copy {
-    grid-area: header;
-    min-width: 0;
-  }
-  .profile-intro > .profile-bio--lead {
-    grid-area: lead;
-  }
-  .profile-rule { margin-left: 0; margin-right: auto; }
-  .profile-bio--vision {
-    text-align: justify;
-    text-align-last: left;
-    text-justify: inter-word;
-    hyphens: auto;
-  }
-  .profile-links { justify-content: flex-start; }
+  .profile-rule { margin-left: auto; margin-right: auto; }
+  .profile-links { justify-content: center; }
 
   .section-head {
     align-items: flex-end;
@@ -1170,7 +1169,12 @@ section { margin-bottom: 52px; }
   }
   .hero-summary-block { margin-bottom: 12px; }
   .hero-summary { max-width: none; }
-  .hero-papers { flex-direction: column; }
+  .hero-papers {
+    grid-template-columns: 1fr;
+  }
+  .hero-paper-continuation {
+    min-height: 88px;
+  }
 
   .works-theme + .works-theme,
   .works-theme--minor,
@@ -1246,14 +1250,6 @@ section { margin-bottom: 52px; }
 
 @media (max-width: 480px) {
   .profile-info h1 { font-size: 1.6rem; }
-  .profile-intro {
-    display: block;
-  }
-  .profile-photo-frame--inline {
-    width: 140px;
-    height: 186px;
-    margin: 12px auto 16px;
-  }
   .pub-grid { grid-template-columns: 1fr; }
 }
 
