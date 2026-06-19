@@ -442,10 +442,15 @@ section { margin-bottom: 52px; }
 .hero-paper-continuation {
   display: grid;
   place-items: center;
-  min-height: 100%;
-  color: rgba(255,255,255,.46);
+  text-align: center;
+  min-height: 130px;
+  padding: 18px 16px;
+  border: 1px dashed rgba(255,255,255,.34);
+  border-radius: 10px;
+  background: rgba(255,255,255,.05);
+  color: rgba(255,255,255,.66);
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: .88rem;
+  font-size: .92rem;
   font-style: italic;
   letter-spacing: .035em;
 }
@@ -1173,7 +1178,7 @@ section { margin-bottom: 52px; }
     grid-template-columns: 1fr;
   }
   .hero-paper-continuation {
-    min-height: 88px;
+    min-height: 96px;
   }
 
   .works-theme + .works-theme,
